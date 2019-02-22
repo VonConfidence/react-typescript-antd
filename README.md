@@ -59,7 +59,17 @@ yarn add ts-import-plugin react-app-rewired@1.6.2 react-app-rewire-less --dev
    };
    ```
 
-2. 接下来可以使用 antd 了
+2. 修改 package.json 中的 script 任务项
+
+   ```json
+    "scripts": {
+      "start": "react-app-rewired start --scripts-version react-scripts-ts",
+      "build": "react-app-rewired build --scripts-version react-scripts-ts",
+      "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts"
+   },
+   ```
+
+3. 接下来可以使用 antd 了
 
    ```tsx
    import { Button } from 'antd';
